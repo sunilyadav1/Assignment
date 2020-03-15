@@ -38,14 +38,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun uiRender(wetherResponse: WeatherResponse?) {
         txtCurrentCity!!.setText(wetherResponse!!.name +" ["+wetherResponse.sys.country+"]")
-        tvTemp_max!!.setText("Temp Max:"+wetherResponse.main.temp_max.toString()+" C")
-        tvTemp_min!!.setText("Temp Min:"+wetherResponse.main.temp_min.toString()+" C")
+        tvTemp_max!!.setText(getString(R.string.temp_max)+wetherResponse.main.temp_max.toString()+" C")
+        tvTemp_min!!.setText(getString(R.string.temp_min)+wetherResponse.main.temp_min.toString()+" C")
 
-        tvHumidity!!.setText("Humidity:"+wetherResponse.main.humidity.toString()+" %")
-        tvFeels_like!!.setText("Feels Like:"+wetherResponse.main.feels_like.toString())
-        tvTemp!!.setText("Temp:"+wetherResponse.main.temp.toString()+" C")
-        tvPressure!!.setText("Pressure:"+wetherResponse.main.pressure.toString()+" P")
-        tvLatlog!!.setText("Latitude:"+wetherResponse.coord.lat.toString()+",  Longitude:"+wetherResponse.coord.lon.toString())
+        tvHumidity!!.setText(getString(R.string.humidity)+wetherResponse.main.humidity.toString()+" %")
+        tvFeels_like!!.setText(getString(R.string.feels_like)+wetherResponse.main.feels_like.toString())
+        tvTemp!!.setText(getString(R.string.temp)+wetherResponse.main.temp.toString()+" C")
+        tvPressure!!.setText(getString(R.string.pressure)+wetherResponse.main.pressure.toString()+" P")
+        tvLatlog!!.setText(getString(R.string.latitude)+wetherResponse.coord.lat.toString()+getString(
+                    R.string.logitude)+wetherResponse.coord.lon.toString())
 
     }
 
