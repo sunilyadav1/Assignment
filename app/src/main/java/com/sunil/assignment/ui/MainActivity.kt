@@ -12,7 +12,7 @@ import com.sunil.mvvmdemo.model.WeatherResponse
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private val FIVE_SECONDS = 1000*5
+    private val ONE_HOURS = 1000*60
     private val handler: Handler = Handler();
 
     private var weatherViewModel: WeatherViewModel? = null
@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
         handler.postDelayed(object : Runnable {
             override fun run() {
                 weatherViewModel!!.init() // this method will contain your almost-finished HTTP calls
-                handler.postDelayed(this, FIVE_SECONDS.toLong())
+                handler.postDelayed(this, ONE_HOURS.toLong())
             }
-        }, FIVE_SECONDS.toLong())
+        }, ONE_HOURS.toLong())
 
         weatherViewModel!!.weather!!.observe(this, Observer { wetherResponse ->
             Log.e(TAG, wetherResponse.toString())
