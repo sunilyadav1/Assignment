@@ -13,7 +13,147 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textSize="@dimen/font_xlarge_size"
+            android:layout_marginTop="@dimen/margin_normal"
+            />
+                <TextView
+                    android:id="@+id/txtCurrentCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_large_size"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weather"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_normal_size"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_margin="@dimen/margin_normal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Temp"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center|start"
+                        android:textSize="@dimen/font_normal_size"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/tvPressure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Pressure"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center|start"
+                        android:textSize="@dimen/font_normal_size"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_margin="@dimen/margin_normal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Humidity"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center|start"
+                        android:textSize="@dimen/font_normal_size"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/tvFeels_like"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Feels Like"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center|start"
+                        android:textSize="@dimen/font_normal_size"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_margin="@dimen/margin_normal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvTemp_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Temp Min"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center|start"
+                        android:textSize="@dimen/font_normal_size"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/tvTemp_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Temp Max"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center|start"
+                        android:textSize="@dimen/font_normal_size"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:id="@+id/tvLatlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="lat lon"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="@dimen/font_normal_size"
+            android:layout_margin="@dimen/margin_large"
+            />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
