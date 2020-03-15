@@ -1,7 +1,8 @@
-package com.sunil.assignment
+package com.sunil.assignment.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sunil.assignment.R
 
 class MainActivity : AppCompatActivity() {
 
